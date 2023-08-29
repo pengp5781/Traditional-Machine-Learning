@@ -8,7 +8,8 @@ The metadata contains everything from titles, abstracts, main essay to, author n
 
 A word cloud overview of main keywords in the articles:
 
-![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/81e6c5cb-d6ec-4e53-a59a-42d6be0dd551)
+![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/67ab0cc7-b33d-4d48-926b-53af5ce6512e)
+
 
 As shown above, discussion revolving around the pandemic was not only limited to how the disease can be cured. There are various topics like:
 1) "artificial" "intelligence".
@@ -17,7 +18,8 @@ As shown above, discussion revolving around the pandemic was not only limited to
 
 It's also noticed that how fast-responding biomedical scientists are -- more than half the total publications were contributed in January 2020 right after the outbreak.
 
-![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/49f81e8b-d10e-441a-b762-02fdb9387afb)
+![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/2de58b63-7792-404e-bef0-d8bfb8ff149b)
+
 
 After the investigation, it was soon determined that a classification model could be created to organize the data into catogories to see how each aspect of the pandemic was investigated. To achieve this, I kept the title and abstract fields and applied a series of processing steps(removing punctuation, stopwords, special chars, etc) to clean the data.The reason why only the title and abstract contents were kept was due to them being the most relevant information for finding categories and the lack of computation power to analyze full-size data(project was made to be ran on google colab)
 
@@ -26,7 +28,8 @@ TF-IDF was used to represent the word data but for bigger dataset like this, hav
 
 I used KMeans algorithm which is a classic but powerful clustering method and it takes in hyper-parameter "k" that indicates number of clusters. Since there are no target values to evaluate the performance of models, I used "Elbow method" to find the most optimal k value. Evaluation is based on the sum of squared distance from the points to the cluster they are assigned to. This sum of distance gets smaller with larger k value(i.e, more clusters) and it equals zero when k is set to number of observation. However, we don't want crazy many clusters, to find optimal k is to find the right amount of clusters that yields relatively low squared error. So I tested 20 models with k value ranging from 1 to 20 and plot their corresponding squared distance. The plot is showing a not so obvious arm-like curve and the turning point/elbow point on arm is determined as optimal point. In this case, optimal k is 9.
 
-![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/ca96091a-d743-434c-bafc-13ca225f355f)
+![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/f459a62f-ecbb-45a7-aa80-2a41d2c60972)
+
 
 
 # Conclusion
@@ -36,19 +39,22 @@ I used KMeans algorithm which is a classic but powerful clustering method and it
 
 ***Group 2 Wordcloud:***
 
-![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/dd54ce85-52c2-4c51-87cf-93bb847d2199)
+![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/7a08b500-4c16-4560-ab1e-86349a4db9b1)
+
 
 - About 2000+ papers are in Spanish as group 7 and 3 should be groups of Spanish papers since the Spanish key words in plot. This might suggest that only minority (about 1%) of scholarly articles are produced by Spanish speaking countries.
 
 ***Group 7 Wordcloud:***
 
-![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/06eae124-02a0-43de-b930-84e454c529ee)
+![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/373be115-3c99-43ec-af4a-f83a70aa9036)
+
 
 - For most categories, there are 2 peak time:January 2020 and January 2021 for paper publication. Only papers in group 3 are published in another peak time at September 2020.
 
 ***Group 3 numebr of publication bar chart:***
 
-![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/939d5c81-a51d-4b6e-8db8-6a69232aca27)
+![image](https://github.com/pengp5781/Traditional-Machine-Learning/assets/111671117/8698b008-8f81-4c74-87e3-d2b792449159)
+
 
 
 ### Insights
